@@ -17,13 +17,8 @@
  * along with SPF.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package it.polimi.deib.spf.wfd;
+package it.polimi.spf.wfd;
 
-public interface WfdMiddlewareListener {
-	
-	void onMessageReceived(WfdMessage msg);
-	void onInstanceFound(String identifier);
-	void onInstanceLost(String identifier);
-	void onError();
-	WfdMessage onRequestMessageReceived(WfdMessage msg);
+public class WfdSignal extends WfdMessage {
+
 }

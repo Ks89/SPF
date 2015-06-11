@@ -27,8 +27,8 @@ import it.polimi.spf.framework.proximity.InboundProximityInterface;
 import it.polimi.spf.framework.proximity.SPFRemoteInstance;
 import it.polimi.spf.framework.security.ContactRequest;
 
-import it.polimi.deib.spf.wfd.WfdMessage;
-import it.polimi.deib.spf.wfd.WfdMiddlewareListener;
+import it.polimi.spf.wfd.WfdMessage;
+import it.polimi.spf.wfd.WfdMiddlewareListener;
 
 import it.polimi.spf.shared.model.InvocationRequest;
 import it.polimi.spf.shared.model.InvocationResponse;

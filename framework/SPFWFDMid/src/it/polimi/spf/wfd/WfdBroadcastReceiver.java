@@ -17,7 +17,7 @@
  * along with SPF.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package it.polimi.deib.spf.wfd;
+package it.polimi.spf.wfd;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -38,16 +38,22 @@ public class WfdBroadcastReceiver extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context arg0, Intent arg1) {
 		String action =  arg1.getAction();
-		if (WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action)){
-			mMid.onPeerListChanged();
-		}else if(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION.equals(action)){
+		
+		if (WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION.equals(action)) {
+			
 			//call on connection info received
 			NetworkInfo netInfo = arg1.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO);
-			if (netInfo.isConnected()){
+			if (netInfo.isConnected()) {
+				// It's a connect
 				mMid.onNetworkConnected();
-			}else{
+			} else {
+				// It's a disconnect
 				mMid.onNetworkDisconnected();
 			}
+			
+		} else if (WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action)){
+			
+			mMid.onPeerListChanged();
 		}
 	}
 

@@ -17,7 +17,7 @@
  * along with SPF.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package it.polimi.deib.spf.wfd;
+package it.polimi.spf.wfd;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;

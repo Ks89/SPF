@@ -17,9 +17,9 @@
  * along with SPF.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package it.polimi.deib.spf.wfd;
+package it.polimi.spf.wfd;
 
-import it.polimi.deib.spf.wfd.GOInternalClient;
+import it.polimi.spf.wfd.GOInternalClient;
 
 import java.io.IOException;
 import java.net.ServerSocket;

@@ -17,8 +17,29 @@
  * along with SPF.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package it.polimi.deib.spf.wfd;
+package it.polimi.spf.wfd;
 
-public class WfdSignal extends WfdMessage {
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+
+public class WfdOutputStream {
+	
+	private PrintWriter writer;
+	
+	public WfdOutputStream(OutputStream outputStream) {
+		this.writer = new PrintWriter(outputStream);
+		
+	}
+
+	public void writeMessage(WfdMessage msg) throws IOException {
+		String str = msg.toString();
+		writer.println(str);
+		writer.flush();
+		if(writer.checkError()){
+			throw new IOException();
+		}
+		
+	}
 
 }

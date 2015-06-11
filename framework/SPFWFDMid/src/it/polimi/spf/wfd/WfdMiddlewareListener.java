@@ -17,30 +17,13 @@
  * along with SPF.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-package it.polimi.deib.spf.wfd;
+package it.polimi.spf.wfd;
 
-import android.util.Log;
-
-public class WfdLog {
-
-	public static boolean ENABLED = false;
-
-	public static void d(String tag, String msg) {
-		if (ENABLED) {
-			Log.d(tag, msg);
-		}
-	}
-
-	public static void d(String tag, String msg, Throwable tr) {
-		if (ENABLED) {
-			Log.d(tag, msg, tr);
-		}
-	}
-
-	public static void e(String tag, String msg, Throwable tr) {
-		if (ENABLED) {
-			Log.e(tag, msg, tr);
-		}
-	}
-
+public interface WfdMiddlewareListener {
+	
+	void onMessageReceived(WfdMessage msg);
+	void onInstanceFound(String identifier);
+	void onInstanceLost(String identifier);
+	void onError();
+	WfdMessage onRequestMessageReceived(WfdMessage msg);
 }

@@ -23,7 +23,7 @@ import it.polimi.spf.alljoyn.AlljoynProximityMiddleware;
 import it.polimi.spf.framework.ExceptionLogger;
 import it.polimi.spf.framework.R;
 import it.polimi.spf.framework.SPFContext;
-
+import it.polimi.spf.wfdadapter.WFDMiddlewareAdapter;
 import android.app.Application;
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -46,9 +46,9 @@ public class SPFApp extends Application {
 		super.onCreate();
 
 		// Initialize SPF
-		SPFContext.initialize(this, AlljoynProximityMiddleware.FACTORY);
+		//SPFContext.initialize(this, AlljoynProximityMiddleware.FACTORY);
 		// Use this line to initialize SPF on Wi-Fi Direct
-		// SPFContext.initialize(this, WFDMiddlewareAdapter.FACTORY);
+		SPFContext.initialize(this, WFDMiddlewareAdapter.FACTORY);
 		SPFContext.get().setAppRegistrationHandler(new PopupAppRegistrationHandler());
 		
 		// Set notification to show when SPF service is in foreground

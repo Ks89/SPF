@@ -1,8 +1,15 @@
 # SPFv1: Social Proximity Framework #
 
-## What is SPF ##
-Social Proximity Framework (SPF) enables social interactions in social smart spaces. It provides an additional software layer on top of a networking middleware to offer different functions enabling social interaction in proximity. External applications may leverage SPF to advertise a social profile in proximity or to discover other profiles matching different queries associated to social interests. Moreover, SPF offers a software library that can be used to access the framework and implement application services, without dealing with the complexities of networking programming. SPF is currently conceived and implemented for Android devices. 
+## DEPRECATED
+**The new version is splitted in 4 projects:**
+- **[SPF2](https://github.com/deib-polimi/SPF2)**
+- **[SPF2CouponingProviderDemo](https://github.com/deib-polimi/SPF2CouponingProviderDemo)**
+- **[SPF2CouponingClientDemo](https://github.com/deib-polimi/SPF2CouponingClientDemo)**
+- **[SPF2ChatDemo](https://github.com/deib-polimi/SPF2ChatDemo)**
 
-SPF is a project developed at 
+
+
+The original SPF is a project developed at 
 Dipartimento di Elettronica Informazione e Bioingegneria
 Politecnico di Milano, Milan, Italy
+by Jacopo Aliprandi and Dario Archetti
